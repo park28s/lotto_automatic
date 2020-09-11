@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lotto_app/login/login_widget.dart';
 
 class LoginHome extends StatefulWidget {
   @override
@@ -6,8 +7,22 @@ class LoginHome extends StatefulWidget {
 }
 
 class _LoginHomeState extends State<LoginHome> {
-  @override
+
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+        children: [
+          buildEmailTF(),
+          buildPasswordTF(),
+          buildForgotPasswordBtn(),
+          buildRememberMecheckbox(),
+          buildLoginBtn(),
+        ],
+
+        ),
+      )
+        );
+
   }
 }
