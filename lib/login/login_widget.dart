@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lotto_app/login/style.dart';
 
@@ -7,17 +6,20 @@ bool rememberMe = false;
 Widget buildEmailTF() {
   return Column(
     children: [
-      Text(
-        'Email',
-        style: kLabelStyle,
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          'Email',
+          style: kLabelStyle,
+        ),
       ),
       SizedBox(
-        height: 10.0,
+        height: 4.0,
       ),
       Container(
         decoration: kBoxDecorationStyle,
         alignment: Alignment.centerLeft,
-        height: 60.0,
+        height: 50.0,
         child: TextFormField(
           keyboardType: TextInputType.emailAddress,
           style: TextStyle(
@@ -26,7 +28,7 @@ Widget buildEmailTF() {
           ),
           decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
+              contentPadding: EdgeInsets.only(top: 13.0),
               prefixIcon: Icon(
                 Icons.email,
                 color: Colors.white,
@@ -42,23 +44,26 @@ Widget buildEmailTF() {
 Widget buildPasswordTF() {
   return Column(
     children: [
-      Text(
-        'Password',
-        style: kLabelStyle,
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          'Password',
+          style: kLabelStyle,
+        ),
       ),
       SizedBox(
-        height: 10.0,
+        height: 4.0,
       ),
       Container(
         alignment: Alignment.centerLeft,
         decoration: kBoxDecorationStyle,
-        height: 60.0,
+        height: 50.0,
         child: TextFormField(
             obscureText: true,
             style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
             decoration: InputDecoration(
                 border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 14.0),
+                contentPadding: EdgeInsets.only(top: 13.0),
                 prefixIcon: Icon(
                   Icons.lock,
                   color: Colors.white,
@@ -108,7 +113,7 @@ Widget buildRememberMecheckbox() {
 
 Widget buildLoginBtn() {
   return Container(
-    padding: EdgeInsets.symmetric(vertical: 25.0),
+    padding: EdgeInsets.symmetric(vertical: 10.0),
     width: double.infinity,
     child: RaisedButton(
         elevation: 5.0,
@@ -149,4 +154,58 @@ Widget buildSignInWithText() {
       )
     ],
   );
+}
+
+Widget buildSocialBtn(Function onTap, AssetImage logo) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Container(
+      height: 60.0,
+      width: 60.0,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black26, offset: Offset(0, 2), blurRadius: 6.0)
+          ],
+          image: DecorationImage(
+            image: logo,
+          )),
+    ),
+  );
+}
+
+Widget buildSocialBtnRow() {
+  return Padding(
+    padding: EdgeInsets.symmetric(vertical: 20.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        buildSocialBtn(
+                () => print('Login with Facebook'),
+            AssetImage('assets/logos/facebook.jpg')),
+        buildSocialBtn(
+          () => print('Login with Google'),
+          AssetImage('assets/logos/google.jpg'),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget buildSingnupBtn() {
+  return GestureDetector(
+      onTap: () => print('Sign Up Button Pressed'),
+      child: RichText(
+        text: TextSpan(children: [
+          TextSpan(
+              text: 'Don\'t have an Account?',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w400,
+              ))
+        ]),
+      ));
 }
