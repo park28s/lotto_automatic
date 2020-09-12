@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lotto_app/login/login_home.dart';
+import 'package:lotto_app/main/main_home.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(color: Colors.lightBlue, elevation: 0),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginHome(),
+      home: MainHome(),
     );
   }
 }

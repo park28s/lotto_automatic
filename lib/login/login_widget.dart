@@ -75,15 +75,31 @@ Widget buildPasswordTF() {
   );
 }
 
-Widget buildForgotPasswordBtn() {
+Widget buildNewAndPasswordBtn() {
   return Container(
-    alignment: Alignment.centerRight,
-    child: FlatButton(
-      child: Text(
-        'Forgot Password?',
-        style: kLabelStyle,
-      ),
-      onPressed: () {},
+    alignment: Alignment.center,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+          child: FlatButton(
+            child: Text(
+              '무료 회원가입',
+              style: kLabelStyle,
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Container(
+          child: FlatButton(
+            child: Text(
+              '아이디&비밀번호 찾기',
+              style: kLabelStyle,
+            ),
+            onPressed: () {},
+          ),
+        )
+      ],
     ),
   );
 }
@@ -139,16 +155,6 @@ Widget buildSignInWithText() {
   return Column(
     children: [
       Text(
-        '- OR -',
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w400,
-        ),
-      ),
-      SizedBox(
-        height: 20.0,
-      ),
-      Text(
         'Sign in with',
         style: kLabelStyle,
       )
@@ -182,14 +188,11 @@ Widget buildSocialBtnRow() {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        buildSocialBtn(
-                () => print('Login with KaKao'),
+        buildSocialBtn(() => print('Login with KaKao'),
             AssetImage('assets/logos/kakao_logo.jpg')),
-        buildSocialBtn(
-                () => print('Login with Naver'),
+        buildSocialBtn(() => print('Login with Naver'),
             AssetImage('assets/logos/naver_logo.jpg')),
-        buildSocialBtn(
-                () => print('Login with Facebook'),
+        buildSocialBtn(() => print('Login with Facebook'),
             AssetImage('assets/logos/facebook.jpg')),
         buildSocialBtn(
           () => print('Login with Google'),
@@ -206,7 +209,7 @@ Widget buildSingnupBtn() {
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
-              text: 'Don\'t have an Account?',
+              text: '회원가입 없이 이용하기',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18.0,

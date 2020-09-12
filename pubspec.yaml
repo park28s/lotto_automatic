@@ -62,6 +62,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Cairo
+        fonts:
+            - asset: assets/fonts/OpenSans.ttf
     - family: OpenSans
       fonts:
         - asset: assets/fonts/OpenSans.ttf

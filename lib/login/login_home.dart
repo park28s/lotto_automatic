@@ -19,20 +19,12 @@ class _LoginHomeState extends State<LoginHome> {
             children: [
               Container(
                 // 첫번째 컨테이너가 뒤로 깔린다. 즉 배경 크기와 색깔을 지정하는것.
+                //Color(0xff398ae5),
                 height: double.infinity,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xff73aef5),
-                    Color(0xff61a4f9),
-                    Color(0xff478de0),
-                    Color(0xff398ae5),
-                  ],
-                  stops: [0.1, 0.4, 0.7, 0.9],
-                )),
+                  color: Color(0xff398ae5)
+                ),
               ),
               Container(
                 height: double.infinity,
@@ -46,7 +38,7 @@ class _LoginHomeState extends State<LoginHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Login',
+                        '로그인',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -57,9 +49,10 @@ class _LoginHomeState extends State<LoginHome> {
                       buildEmailTF(),
                       SizedBox(height: 30.0),
                       buildPasswordTF(),
-                      buildForgotPasswordBtn(),
+                      buildNewAndPasswordBtn(),
                       buildRememberMecheckbox(),
                       buildLoginBtn(),
+                      SizedBox(height: 20.0),
                       buildSignInWithText(),
                       buildSocialBtnRow(),
                       buildSingnupBtn()
