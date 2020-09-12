@@ -183,6 +183,12 @@ Widget buildSocialBtnRow() {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         buildSocialBtn(
+                () => print('Login with KaKao'),
+            AssetImage('assets/logos/kakao_logo.jpg')),
+        buildSocialBtn(
+                () => print('Login with Naver'),
+            AssetImage('assets/logos/naver_logo.jpg')),
+        buildSocialBtn(
                 () => print('Login with Facebook'),
             AssetImage('assets/logos/facebook.jpg')),
         buildSocialBtn(
