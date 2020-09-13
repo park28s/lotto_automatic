@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lotto_app/login/login_home.dart';
 import 'package:lotto_app/main/main_home.dart';
 
 void main() => runApp(MyApp());

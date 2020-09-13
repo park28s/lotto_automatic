@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lotto_app/login/style.dart';
+import 'package:lotto_app/main/main_home.dart';
 
 bool rememberMe = false;
 
@@ -203,18 +204,18 @@ Widget buildSocialBtnRow() {
   );
 }
 
-Widget buildSingnupBtn() {
-  return GestureDetector(
-      onTap: () => print('Sign Up Button Pressed'),
-      child: RichText(
-        text: TextSpan(children: [
-          TextSpan(
-              text: '회원가입 없이 이용하기',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-              ))
-        ]),
-      ));
-}
+  Widget buildSingnupBtn() {
+    return GestureDetector(
+        onTap: () {},
+        child: RichText(
+          text: TextSpan(children: [
+            TextSpan(
+                text: '회원가입 없이 이용하기',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w400,
+                ))
+          ]),
+        ));
+  }

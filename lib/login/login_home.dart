@@ -19,7 +19,6 @@ class _LoginHomeState extends State<LoginHome> {
             children: [
               Container(
                 // 첫번째 컨테이너가 뒤로 깔린다. 즉 배경 크기와 색깔을 지정하는것.
-                //Color(0xff398ae5),
                 height: double.infinity,
                 width: double.infinity,
                 decoration: BoxDecoration(
