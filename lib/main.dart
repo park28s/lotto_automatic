@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Lotto AutoMatic Issuance',
       theme: ThemeData(
-        appBarTheme: AppBarTheme(color: Colors.lightBlue, elevation: 0),
+        fontFamily: 'CookieRun',
+        appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainHome(),

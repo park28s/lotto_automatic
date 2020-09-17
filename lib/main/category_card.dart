@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:lotto_app/main/constants.dart';
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
+  final String title1;
   final Function press;
 
-  const CategoryCard({Key key, this.svgSrc, this.title, this.press})
-  : super(key: key);
+  const CategoryCard({Key key, this.svgSrc, this.title, this.title1, this.press})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +20,10 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.indigoAccent,
             borderRadius: BorderRadius.circular(13),
-          boxShadow: [
-            BoxShadow(
-                color: Colors.black26,
-                blurRadius: 2.0,
-                offset: Offset(0, 0)
-            )
-          ]
-           ),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black26, blurRadius: 2.0, offset: Offset(0, 0))
+            ]),
         child: Material(
           color: Colors.transparent,
           child: InkWell(
@@ -35,16 +33,27 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 children: [
                   Spacer(),
-                  SvgPicture.asset(svgSrc),
-                  Spacer(),
+                  //SvgPicture.asset(svgSrc),
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context)
-                        .textTheme
-                        .subtitle1
-                        .copyWith(fontSize: 15),
-                  )
+                    style: TextStyle(
+                      fontFamily: 'CookieRun',
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Spacer(),
+                  Text(
+                    title1,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'CookieRun',
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Spacer(),
                 ],
               ),
             ),

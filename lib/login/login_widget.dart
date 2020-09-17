@@ -206,7 +206,8 @@ Widget buildSocialBtnRow() {
 
   Widget buildSingnupBtn() {
     return GestureDetector(
-        onTap: () {},
+        onTap: () {
+        },
         child: RichText(
           text: TextSpan(children: [
             TextSpan(
