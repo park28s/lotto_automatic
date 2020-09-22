@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lotto_app/login/style.dart';
-import 'package:lotto_app/main/main_home.dart';
 
 bool rememberMe = false;
 
@@ -111,11 +110,11 @@ Widget buildRememberMecheckbox() {
     child: Row(
       children: [
         Theme(
-            data: ThemeData(unselectedWidgetColor: Colors.white),
+            data: ThemeData(unselectedWidgetColor: Colors.lightBlue),
             child: Checkbox(
                 value: rememberMe,
                 checkColor: Colors.green,
-                activeColor: Colors.white,
+                activeColor: Colors.blueGrey,
                 onChanged: (value) {
                   rememberMe = value;
                 })),
@@ -138,11 +137,11 @@ Widget buildLoginBtn() {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
-        color: Colors.white,
+        color: Color(0xff6ca8f1),
         child: Text(
           'LOGIN',
           style: TextStyle(
-              color: Color(0xff527daa),
+              color: Colors.white,
               letterSpacing: 1.5,
               fontSize: 18.0,
               fontWeight: FontWeight.bold,
@@ -174,7 +173,7 @@ Widget buildSocialBtn(Function onTap, AssetImage logo) {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-                color: Colors.black26, offset: Offset(0, 2), blurRadius: 6.0)
+                color: Colors.black54, offset: Offset(0, 2), blurRadius: 6.0)
           ],
           image: DecorationImage(
             image: logo,
@@ -204,19 +203,19 @@ Widget buildSocialBtnRow() {
   );
 }
 
-  Widget buildSingnupBtn() {
+  Widget buildSingnupBtn(context) {
     return GestureDetector(
-        onTap: () {
-        },
-        child: RichText(
-          text: TextSpan(children: [
-            TextSpan(
-                text: '회원가입 없이 이용하기',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w400,
-                ))
-          ]),
-        ));
+      onTap: () => Navigator.of(context).pop(),
+      child: RichText(
+            text: TextSpan(children: [
+              TextSpan(
+                  text: '회원가입 없이 이용하기',
+                  style: TextStyle(
+                    color: Colors.lightBlue,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w900,
+                  ))
+            ]),
+          ),
+    );
   }

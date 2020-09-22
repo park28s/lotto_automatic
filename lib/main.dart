@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
       title: 'Lotto AutoMatic Issuance',
       theme: ThemeData(
         fontFamily: 'CookieRun',
-        appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
+        appBarTheme: AppBarTheme(color: Colors.white, elevation: 0
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainHome(),
