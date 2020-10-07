@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "723862034571",
+    "firebase_url": "https://lottoauto-e6219.firebaseio.com",
+    "project_id": "lottoauto-e6219",
+    "storage_bucket": "lottoauto-e6219.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723862034571:android:c97b9e484500bd98aa9c8e",
+        "android_client_info": {
+          "package_name": "com.example.lotto_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723862034571-0d9pkj0f9n276ujtmc45nf4n0esnrtlr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lotto_app",
+            "certificate_hash": "175226a4c9a6d8e4b4ff943e63cf35f701b3e96b"
+          }
+        },
+        {
+          "client_id": "723862034571-ilq3a5dlmu2ku8pdguao8iaune0g2adj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf3OBUhiYVscO0MrN1_FGZkdZG1HcmFsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723862034571-ilq3a5dlmu2ku8pdguao8iaune0g2adj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

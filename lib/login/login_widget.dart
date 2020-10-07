@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lotto_app/login/sign/sign_up.dart';
 import 'package:lotto_app/login/style.dart';
 
 bool rememberMe = false;
@@ -27,8 +28,8 @@ Widget buildEmailTF() {
             fontFamily: 'OpenSans',
           ),
           decoration: InputDecoration(
-              border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 13.0),
+              border: InputBorder.none,
               prefixIcon: Icon(
                 Icons.email,
                 color: Colors.white,
@@ -75,7 +76,7 @@ Widget buildPasswordTF() {
   );
 }
 
-Widget buildNewAndPasswordBtn() {
+Widget buildNewAndPasswordBtn(context) {
   return Container(
     alignment: Alignment.center,
     child: Row(
@@ -87,7 +88,10 @@ Widget buildNewAndPasswordBtn() {
               '무료 회원가입',
               style: kLabelStyle,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => SignUp()));
+            },
           ),
         ),
         Container(
@@ -145,7 +149,7 @@ Widget buildLoginBtn() {
               letterSpacing: 1.5,
               fontSize: 18.0,
               fontWeight: FontWeight.bold,
-              fontFamily: 'OpenSans'),
+              fontFamily: 'CookieRun'),
         ),
         onPressed: () {}),
   );
@@ -213,7 +217,8 @@ Widget buildSocialBtnRow() {
                   style: TextStyle(
                     color: Colors.lightBlue,
                     fontSize: 18.0,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'CookieRun'
                   ))
             ]),
           ),

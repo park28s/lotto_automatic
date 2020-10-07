@@ -45,8 +45,7 @@ class _MainHomeState extends State<MainHome> {
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)),
                 color: Colors.lightBlue),
-            child: Expanded(
-                child: Column(children: [
+            child: Column(children: [
               Row(
                 children: [
                   Container(
@@ -168,7 +167,7 @@ class _MainHomeState extends State<MainHome> {
                 ],
               ),
             ])),
-          ),
+
           ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.lightBlue,
